@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>YanSir Park</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 25 Aug 2018 20:25:50 +0800</pubDate>
+    <lastBuildDate>Sat, 25 Aug 2018 20:25:50 +0800</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>三招学会跨部门沟通</title>
+        <description>&lt;p&gt;现代职场，很少能够单打独斗。&lt;/p&gt;
+
+&lt;p&gt;多数时候，我们需要团队协作（Team work）。比如处理投诉，质量、生产、技术的团队都会参与；比如设备升级改造，工艺、项目、维修、生产也要紧密配合。一个问题，往往都是一个部门主导，其他部门配合，共同解决。&lt;/p&gt;
+
+&lt;p&gt;现实的情况下，大家都很忙。作为组织者，如何扛起跨部门的大旗。&lt;/p&gt;
+
+&lt;p&gt;###面对面沟通（Face to Face）&lt;/p&gt;
+
+&lt;p&gt;我们经常能发现：一个简单的问题，在邮件中有些细节没表达清楚，大家来来回回的讨论和确认，相当费神。&lt;/p&gt;
+
+&lt;p&gt;更好的方式，我们推荐面对面沟通。当面陈述问题，获得即时反馈，助于双方厘清问题的细节，消除信息不对称。当面对面难以实现时，通过电话沟通，也是一个很好的选择。&lt;/p&gt;
+
+&lt;p&gt;###任务细分（Breakdown）&lt;/p&gt;
+
+&lt;p&gt;问题的解决，通常需要各个层面的资源。&lt;/p&gt;
+
+&lt;p&gt;例如处理质量投诉，生产部门要提供产品生产过程中的记录；质检部门要找到之前的样品，重新测试；甚至还需要技术部门到客户现场，确认具体的问题；这些信息收集完成之后，再一起讨论分析，找到问题发生的根本原因（Root cause）。&lt;/p&gt;
+
+&lt;p&gt;有经验的组织者，会将问题拆分成一个个小的行动项(Action)。每个行动项确定一个负责人（Owner)，并设置完成期限（Deadline）。&lt;/p&gt;
+
+&lt;p&gt;通过这种方式，参与者有明确的目标，组织者也能把握事情的进展。&lt;/p&gt;
+
+&lt;p&gt;###会议纪要（Meeting minutes）&lt;/p&gt;
+
+&lt;p&gt;面对面的讨论和会议上决定，最终都会被忘记。只有想起来时，才会在邮件中查找。&lt;/p&gt;
+
+&lt;p&gt;会议纪要，是解决这一问题的最好办法。&lt;/p&gt;
+
+&lt;p&gt;无论什么时候做出的决议，只要有必要，都可以通过邮件的方式将会议纪要发送给每一个相关的人。各个参与者通过会议纪要，能再次确认讨论的结果，也方便后期更新工作进展。&lt;/p&gt;
+</description>
+        <pubDate>Sat, 25 Aug 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/08/25/%E4%B8%89%E6%8B%9B%E5%AD%A6%E4%BC%9A%E8%B7%A8%E9%83%A8%E9%97%A8%E6%B2%9F%E9%80%9A/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/08/25/%E4%B8%89%E6%8B%9B%E5%AD%A6%E4%BC%9A%E8%B7%A8%E9%83%A8%E9%97%A8%E6%B2%9F%E9%80%9A/</guid>
+        
+        <category>沟通</category>
+        
+        <category>职场</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Guideline for cards</title>
+        <description>&lt;p&gt;###知识创造的层级&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;卡片&lt;/li&gt;
+  &lt;li&gt;文件&lt;/li&gt;
+  &lt;li&gt;项目&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;###卡片的种类&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;术语卡&lt;/li&gt;
+  &lt;li&gt;人名卡&lt;/li&gt;
+  &lt;li&gt;反常识卡&lt;/li&gt;
+  &lt;li&gt;金句卡&lt;/li&gt;
+  &lt;li&gt;行动卡&lt;/li&gt;
+  &lt;li&gt;技巧卡&lt;/li&gt;
+  &lt;li&gt;任意卡&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;###卡片的最小行动&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;反常识卡&lt;/li&gt;
+  &lt;li&gt;人名卡&lt;/li&gt;
+  &lt;li&gt;术语卡&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;###必要难度理论&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;时间的必要难度&lt;/li&gt;
+  &lt;li&gt;地点的必要难度&lt;/li&gt;
+  &lt;li&gt;记忆的生成效应&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;####阅读一本书的卡片模式&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;一张反常识卡: 主题核心&lt;/li&gt;
+  &lt;li&gt;三张术语卡: 支持主题的证据&lt;/li&gt;
+  &lt;li&gt;一张人名卡: 找出证据或案例的源头&lt;/li&gt;
+  &lt;li&gt;一张金句卡: 非常震撼的话语&lt;/li&gt;
+  &lt;li&gt;一张行动卡: 能够指导自己行动的卡&lt;/li&gt;
+  &lt;li&gt;一张任意卡: 记录个人阅读感想&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;###参考资料
+&lt;a href=&quot;https://mp.weixin.qq.com/s/p4Mritb0M_pEcFQ7wj1oig&quot;&gt;卡片十二问&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 Aug 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/08/19/Guildline-for-blog/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/08/19/Guildline-for-blog/</guid>
+        
+        <category>Tools</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
