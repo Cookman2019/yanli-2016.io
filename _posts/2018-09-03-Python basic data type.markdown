@@ -6,7 +6,7 @@ date:       2018-09-03
 author:     "YanSir"
 header-img: "img/post-bg-js-version.jpg"
 tags:
-    - Tools
+    - Python
 ---
 
 
