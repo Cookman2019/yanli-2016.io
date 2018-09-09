@@ -1,0 +1,191 @@
+---
+layout:     post
+title:      "Python 文件的处理"
+subtitle:   ""
+date:       2018-09-09
+author:     "YanSir"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Python
+---
+
+
+# Python 文件的处理
+
+### 文件处理的步骤
+
+1. 打开
+2. 操作
+3. 关闭
+
+
+### 打开文件
+
+#### 语法格式
+
+```
+a = open(,)
+<变量名> = open(<文件名>,<打开模式>)
+文件句柄/文件路径和名称/文本或二进制或读或写
+
+# 示例
+tf = open("f.txt", "rt")
+print(tf.readline())
+tf.close
+
+```
+
+
+#### 文件路径
+
+实际: D:\PYE\f.txt
+
+代码中的写法
+
+```
+# 第一种
+D:/PYE/f.txt
+
+# 第二种
+D:\\PYE\\f.txt
+
+```
+
+#### 文件打开的模式
+
+1. r: 只读，默认值
+2. w: 覆盖写
+3. x: 创建写
+4. a: 追加写
+5. b: 二进制文件
+6. t: 文本文件模式，默认值
+7. +: 与r,w,x,a 一同使用，在原功能基础上增加同时读写的功能
+
+应用示例
+
+```
+f = open("f.txt")
+f = open("f.txt", "rt")
+f = open("f.txt", "w")
+f = open("f.txt", "a+")
+f = open("f.txt", "x")
+f = open("f.txt", "b")
+f = open("f.txt", "wb")
+
+```
+
+
+
+### 读文件
+
+1. 读取全部内容，size 表示读取的长度
+2. 读取一行内容，size 表示读取的长度
+3. 读入文件所有行，hint表示读入前几行
+
+
+```
+a.read(size)
+a.readline(size)
+a.readlines(hint)
+```
+
+### 写文件
+
+写入一个字符串
+
+```
+tf = open("f.txt","w+")
+tf.write("talk is cheap, show me the code""")
+tf.seek(0)
+print(tf.readline())
+tf.close
+```
+
+写入列表中的元素
+
+```
+tf = open("f.txt","w+")
+ls = ["Python", "Java"]
+tf.writelines(ls)
+tf.seek(0)
+print(tf.readline())
+tf.close
+```
+
+fo.seek()的作用
+
+情况1
+
+```
+fo = open("f.txt", "w+")
+ls = ["中国","法国","美国"]
+fo.writelines(ls)
+for line in fo:
+    print(line)
+fo.close
+```
+
+情况2
+
+```
+fo = open("f.txt", "w+")
+ls = ["中国","法国","美国"]
+fo.writelines(ls)
+fo.seek(0)
+for line in fo:
+    print(line)
+fo.close
+
+```
+
+### 关闭文件
+
+```
+a.close()
+```
+
+
+### 遍历全文本
+
+一次性读取
+
+```
+fname = input("请输入要打开的文件名称：")
+fo = open(fname,"r")
+txt =  fo.read()
+print(txt)
+fo.close()
+```
+
+按指定长度读取
+
+```
+fname = input("请输入要打开的文件名称：")
+fo = open(fname,"r")
+txt =  fo.read(2)
+print(txt)
+while txt != "":
+    txt = fo.read(2)
+    print(txt)
+
+fo.close()
+```
+
+一次读入，分行处理
+
+```
+fname = input("请输入要打开的文件名称：")
+fo = open(fname,"r")
+for line in fo.readlines():
+    print(line)
+fo.close()
+```
+
+分行处理
+
+```
+tf = open("f.txt")
+for line in tf:
+    print(line)
+tf.close()
+```
