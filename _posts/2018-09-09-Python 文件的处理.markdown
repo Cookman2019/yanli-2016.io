@@ -12,6 +12,13 @@ tags:
 
 # Python 文件的处理
 
+## 基础知识
+
+### 文件的种类
+
+1. 文本文件: .txt, .py
+2. 二进制文件: .avi,.png
+
 ### 文件处理的步骤
 
 1. 打开
@@ -189,3 +196,284 @@ for line in tf:
     print(line)
 tf.close()
 ```
+
+### 一维数据
+
+1. 对应列表，数组和集合等概念
+2. 数据为对等关系，采用线性方式组织
+
+#### 表示方法
+
+1. 数据有序，使用列表类型
+2. 数据无序，使用集合类型
+
+#### 存储
+
+1. 空格分隔
+2. 逗号分隔
+3. 特殊符号分隔，例如$
+
+
+#### 从文件中读取一维数据
+
+
+```
+fname = "f.txt"
+txt = open(fname).read()
+print(txt)
+ls = txt.split(",")
+print(ls)
+open(fname).close()
+```
+f.txt
+
+```
+中国,日本,韩国,俄罗斯
+```
+
+#### 向文件中写入一维数据
+
+```
+fname = "f.txt"
+ls = ['中国','美国','日本']
+f = open(fname, 'w')
+f.write('%'.join(ls))
+f.seek(0)
+f.close
+print(open(fname).read())
+```
+
+
+### 二维数据
+
+1. 多个一维数据构成
+2. 表格是典型的二维数据
+3. 可使用列表类型表示
+
+#### 读取文件中的二维数据
+
+```
+add = "f.txt"
+fname = open(add)
+ls = []
+for line in fname:
+    line = line.replace("\n", "")
+    ls.append(line.split(","))
+    print(ls)
+fname.close()
+```
+
+#### 将二维数据写入文件
+
+```
+add = "f.txt"
+ls = [['日本','中国','韩国'],['德国','法国','英国']]
+f = open(add,'w+')
+for item in ls:
+    f.write(",".join(item)+"\n")
+f.seek(0)
+print(f.read())
+f.close
+```
+
+
+### 多维数据
+
+1. 由一维或者二维在新的维度上扩展形成
+
+
+### wordcloud 库
+
+1. 以空格分隔单词
+2. 统计单词出现次数并过滤
+3. 根据统计配置字号
+4. 整体布局
+
+#### 最简化的使用方式
+
+```
+# 配置对象参数
+import wordcloud
+w = wordcloud.WordCloud()
+
+# 加载词云文本
+w.generate("Show me the code")
+
+# 输出词云文件
+w.to_file("outfile.png")
+
+```
+
+#### 自定义参数
+
+指定词云的大小，默认为400*200
+
+```
+w = wordcloud.WordCloud(width = 600)
+w = wordcloud.WordCloud(height = 600)
+```
+
+指定字体
+
+```
+w = wordcloud.WordCloud(min_font_size = 10)
+w = wordcloud.WordCloud(min_font_size = 20)
+w = wordcloud.WordCloud(font_step = 2)
+w = wordcloud.WordCloud(font_path = "msyh.ttc")
+```
+
+指定显示的单词数量
+
+```
+w = wordcloud.WordCloud(max_words = 20)
+```
+
+指定不显示的单词
+
+```
+w = wordcloud.WordCloud(stop_words = {"Python"})
+```
+
+指定词云形状
+
+```
+from scipy.misc import imread
+mk = imread("pic.png")
+w = wordcloud.WordCloud(mask = mk)
+```
+
+指定词云背景颜色,默认为黑色
+
+```
+w = wordcloud.WordCloud(background_color = "whith")
+```
+
+
+
+
+
+
+
+## 应用实例
+
+### 自动轨迹绘制
+
+#### 基本思路
+
+1. 定义数据文件格式（接口）
+2. 编写程序，根据文件接口解析参数绘制图形
+3. 编制数据文件
+
+#### 代码
+
+```
+import turtle as t 
+t.title('自动轨迹绘制')
+t.setup(800,600,0,0)
+t.pencolor("red")
+t.pensize(5)
+
+# 数据读取
+datals = []
+f = open("data.txt")
+for line in f:
+    line = line.replace("\n", "")
+    datals.append(list(map(eval,line.split(","))))
+f.close()
+# 自动绘制
+for i in range(len(datals)):
+    t.pencolor(datals[i][3],datals[i][4],datals[i][5])
+    t.fd(datals[i][0])
+    if datals[i][1]:
+        t.right(datals[i][2])
+    else:
+        t.right(datals[i][2])
+```
+
+data.txt 文件内容
+
+```
+300,0,144,1,0,0
+300,0,144,0,1,0
+300,0,144,0,0,1
+300,0,144,1,1,0
+300,0,108,0,1,1
+184,0,72,1,0,1
+184,0,72,0,0,0
+184,0,72,0,0,0
+184,0,72,0,0,0
+184,1,72,1,0,1
+```
+
+### 绘制词云
+
+#### 生成词云_英文
+
+```
+import wordcloud
+txt = "life is short, you need python"
+w = wordcloud.WordCloud(background_color="white")
+w.generate(txt)
+w.to_file("pywcloud.png")
+
+```
+
+#### 生成词云_中文
+
+```
+import jieba
+import wordcloud
+txt = "用Python可以做什么？可以做日常任务，比如自动备份你的MP3；可以做网站，很多著名的网站包括YouTube就是Python写的；可以做网络游戏的后台，很多在线游戏的后台都是Python开发的。总之就是能干很多很多事啦。"
+w = wordcloud.WordCloud(width = 1000,height = 700,font_path="Arial Unicode.ttf")
+w.generate(" ".join(jieba.lcut(txt)))
+w.to_file("pywcloud1.png")
+```
+
+#### 生成词云_政府工作报告
+
+```
+import jieba
+import wordcloud
+f = open("新时代中国特色社会主义.txt","r",encoding="utf-8")
+t = f.read()
+f.close()
+ls = jieba.lcut(t)
+txt = " ".join(ls)
+w = wordcloud.WordCloud(width = 1000,height = 700,font_path="Arial Unicode.ttf",background_color="white",max_words=15)
+w.generate(txt)
+w.to_file("grwordcloud.png")
+```
+
+#### 生成词云_乡村振兴战略
+
+```
+import jieba
+import wordcloud
+f = open("关于实施乡村振兴战略的意见.txt","r",encoding="utf-8")
+t = f.read()
+f.close()
+ls = jieba.lcut(t)
+txt = " ".join(ls)
+w = wordcloud.WordCloud(width = 1000,height = 700,font_path="Arial Unicode.ttf",background_color="white")
+w.generate(txt)
+w.to_file("grwordcloud.png")
+```
+
+#### 生成词云_自定义词云形状
+
+```
+import jieba
+import wordcloud
+import imageio
+mask = imageio.imread("fivestart.png")
+f = open("新时代中国特色社会主义.txt","r",encoding="utf-8")
+t = f.read()
+f.close()
+ls = jieba.lcut(t)
+txt = " ".join(ls)
+w = wordcloud.WordCloud(width = 1000,height = 700,font_path="Arial Unicode.ttf",background_color="white",max_words=15,mask=mask)
+w.generate(txt)
+w.to_file("grwordcloud.png")
+```
+
+
