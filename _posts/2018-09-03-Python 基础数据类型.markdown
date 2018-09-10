@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Basic data type of Python"
+title:      "Python 基础数据类型"
 subtitle:   ""
 date:       2018-09-03
 author:     "YanSir"
