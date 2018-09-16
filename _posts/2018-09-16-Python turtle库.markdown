@@ -6,7 +6,8 @@ date:       2018-09-16
 author:     "YanSir Park"
 header-img: "img/post-bg-js-version.jpg"
 tags:
-    - Python, Python库
+    - Python
+    - Python库
 ---
 
 # Python turtle 库
