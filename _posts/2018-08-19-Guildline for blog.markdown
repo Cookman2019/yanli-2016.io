@@ -3,7 +3,7 @@ layout:     post
 title:      "Guideline for cards"
 subtitle:   "撰写卡片的指南"
 date:       2018-08-19
-author:     "YanSir"
+author:     "YanSir Park"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - Tools

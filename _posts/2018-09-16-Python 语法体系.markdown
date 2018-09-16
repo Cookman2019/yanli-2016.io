@@ -1,0 +1,34 @@
+---
+layout:     post
+title:      "Python 语法体系"
+subtitle:   ""
+date:       2018-09-16
+author:     "YanSir Park"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Python
+---
+
+
+# Python 语法体系
+
+## 基本数据类型
+1. 数值
+2. 序列
+3. 集合
+4. 字典
+
+## 程序控制结构
+1. 分支结构
+2. 循环结构
+3. 异常处理
+
+## 函数和代码复用
+
+1. 函数定义和使用
+2. 函数递归
+
+## 文件和数据格式化
+
+1. 文件的使用
+2. 数据的存储和处理

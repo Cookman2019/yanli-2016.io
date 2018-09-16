@@ -1,0 +1,99 @@
+---
+layout:     post
+title:      "Python 函数"
+subtitle:   ""
+date:       2018-09-16
+author:     "YanSir Park"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Python
+---
+
+# Python 函数
+
+## 函数的定义与使用
+
+```
+def add(x, y):
+    result = x + y
+    return result
+def user_print(code):
+    print(code)
+a = add(1, 2)
+b = user_print('python')
+print(a, b)
+```
+
+
+## 返回多个数值
+
+
+```
+def damage(skill_1, skill_2):
+    damage1 = skill_1 * 3
+    damage2 = skill_2 * 2 + 10
+    return damage1, damage2
+damages = damage(3, 6)
+print(damages[0], damages[1])
+print(type(damages))
+```
+
+```
+def damage(skill_1, skill_2):
+    damage1 = skill_1 * 3
+    damage2 = skill_2 * 2 + 10
+    return damage1, damage2
+skill_1_damages, skill_2_damages = damage(3, 6)
+print(skill_1_damages, skill_2_damages)
+print(type(damage(3,6)))
+```
+
+## 指定返回结果的小数位数
+
+```
+a = 1.12386
+print(round(a, 2))
+```
+
+## 变量的赋值_序列解包
+
+```
+a = 1
+b = 2
+c = 3
+a, b, c = 1,2,3
+d = 4,5,6
+print(type(d))
+print(d)
+a, b, c = d
+print(a,b,c)
+```
+
+## 函数的参数
+
+```
+# 必须参数，关键字参数
+# 形式参数
+# 实际参数 函数调用过程中的参数
+# 关键字参数，与必须参数的区别在于函数的调用上
+def add(y, x):
+    result = x + y
+    return result
+c = add(y = 3, x = 2)
+print(c)
+```
+
+## 默认参数
+
+```
+def print_student_files(name, gender = '男', age = '12', college = '人民路小学' ):
+    print('我叫' + name)
+    print('我今年' + str(age))
+    print('我是' + gender + '生')
+    print('我在' + college + '上学')
+print_student_files('麦兜','男', 18, '人名路小学')
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~')
+print_student_files('叮当', '男', 12)
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~')
+print_student_files('佩琦', '女', age = 12, college = '万达小学')
+```

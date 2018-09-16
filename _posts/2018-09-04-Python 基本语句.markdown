@@ -3,7 +3,7 @@ layout:     post
 title:      "Python 基本语句"
 subtitle:   ""
 date:       2018-09-04
-author:     "YanSir"
+author:     "YanSir Park"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - Python

@@ -3,7 +3,7 @@ layout:     post
 title:      "Python 文件的处理"
 subtitle:   ""
 date:       2018-09-09
-author:     "YanSir"
+author:     "YanSir Park"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - Python

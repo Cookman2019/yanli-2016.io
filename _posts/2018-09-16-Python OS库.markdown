@@ -1,0 +1,50 @@
+---
+layout:     post
+title:      "Python OS库"
+subtitle:   ""
+date:       2018-09-16
+author:     "YanSir Park"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Python, Python库
+---
+
+## Python OS 库
+
+### 路径操作
+
+1. 返回绝对路径: os.path.abspath(path)
+2. 归一化路径的表示形式: os.path.normpath(path)
+3. 返回相对路径: os.path.relpath(path)
+4. 返回目录名称: os.path.dirname(path)
+5. 返回文件名: os.path.basename(path)
+6. 结合路径和名称: os.path.join(path)
+7. 判断文件或目录是否存在: os.path.exists(path)
+8. 判断文件是否已存在: os.path.isfile(path)
+9. 判断是否为已存在的目录: os.path.isdir(path)
+10. 获取上一次访问的时间: os.path.getatime(path)
+11. 获取最近一次的修改时间: os.path.getmtime(path)
+12. 获取创建时间: os.path.getctime(path)
+13. 获取文件的大小: os.path.getsize(path)
+
+### 进程管理
+
+```
+os.system(command)
+```
+
+```
+import os
+os.system("C:\\Windows\\System32\\mspaint.exe \
+D:\\PYECourse\\grwordcloud.png")
+```	
+
+### 环境参数
+
+1. 修改当前程序操作的路径: os.chdir(path)
+2. 获取程序的当前路径: os.getcwd()
+3. 获取当前系统等入的用户名: os.getlogin()
+4. 获取当前系统的CPU数量: os.cpu_count()
+5. 获得n个字节的随机字符串: os.urandom(n)
+
+

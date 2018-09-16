@@ -1,0 +1,39 @@
+---
+layout:     post
+title:      "Python 中的基础概念"
+subtitle:   ""
+date:       2018-09-16
+author:     "YanSir Park"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Python
+---
+
+# Python 中的基础概念
+
+## 表达式(Expression)
+
+运算符(operator)和操作数(operand)所构成的序列（C 语言中的定义）
+
+## 编译
+
+1. 源代码 - 编译器 - 目标代码
+2. 编程目标代码之后就不需要源代码
+
+## 解释
+1. 每次都需要原文
+2. 逐条解释
+
+## 静态语言和脚本语言
+
+1. 静态语言：使用编译执行的编程语言
+2. 脚本语言：使用解释器的语言
+
+## 编程的IPO原则
+
+1. Input
+2. Process
+3. Output
+
+
+

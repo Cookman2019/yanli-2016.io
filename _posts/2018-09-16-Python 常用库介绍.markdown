@@ -1,0 +1,63 @@
+---
+layout:     post
+title:      "Python 常用库介绍"
+subtitle:   ""
+date:       2018-09-16
+author:     "YanSir Park"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Python, Python库
+---
+
+
+## Python 常用库介绍
+
+### 绘图
+
+[turtle 库](https://docs.python.org/3/library/turtle.html)
+
+
+### GUI
+
+[Tkinter 库](https://wiki.python.org/moin/TkInter)
+
+### 微信公众号开发
+
+[WeRobot](https://werobot.readthedocs.io/zh_CN/v1.6.0/)
+
+### 网页开发
+
+[Flask](http://flask.pocoo.org/) 轻量级网页开发
+
+[Django](https://www.djangoproject.com/) 专业级网页开发
+
+### Web 信息提取
+
+[Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
+
+
+### 网络爬虫
+
+[Requests](http://www.python-requests.org/en/master/)
+[Scrapy](https://scrapy.org/)
+
+
+
+### 第三方库的自动安装
+
+```
+import os
+libs = {"numpy","matplotlib","pillow","sklearn","requests",\
+"jieba","beautifulsoup4","wheel","networkx","sympy",\
+"pyinstaller","django","flask","werobot","pyqt5",\
+"pandas","pyopengl","pypdf2","docopt","pygame"}
+try:
+for lib in libs:
+os.system("pip install " + lib)
+print("Successful")
+except:
+print("Failed Somehow")
+```
+
+
+

@@ -3,7 +3,7 @@ layout:     post
 title:      "三招学会跨部门沟通"
 subtitle:   "高效沟通的秘密"
 date:       2018-08-25
-author:     "YanSir"
+author:     "YanSir Park"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - 沟通

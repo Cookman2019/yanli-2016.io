@@ -1,0 +1,138 @@
+---
+layout:     post
+title:      "Python 项目"
+subtitle:   ""
+date:       2018-09-16
+author:     "YanSir Park"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Python
+---
+
+# Python 项目
+
+## Python 项目的组织结构
+
+1. 包（文件夹）
+2. 模块（文件，可以包含多个类）
+3. 类
+4. 函数、变量
+
+
+## python 包必备的模块
+
+```
+__init__.py
+```
+
+## 模块的引用
+
+```
+import c7
+print(c7.a)
+```
+
+```
+import c7 as m
+print(m.a)
+```
+
+```
+from c7 import a
+print(a)
+```
+
+## 模块引用的示例
+
+c7
+
+```
+__all__ = ['a','c']
+a = 2
+b = 3
+c = 4
+```
+
+c8
+```
+from c7 import *
+print(a)
+print(c)
+print(d)
+```
+
+## 不想显示某些文件
+
+```
+"files.exclude":
+```
+ 
+## import 时换行
+
+使用下划线
+
+```
+from c7 import a, b, \
+c
+print(a)
+print(b)
+print(c)
+```
+
+使用括号
+
+```
+from c7 import (a, b, 
+c)
+print(a)
+print(b)
+print(c)
+```
+
+## 包自动运行机制
+
+import ‘t’ 时即可自动运行
+
+```
+备注__init__.py 的文件中的内容，存在t文件夹下
+a = 'This is __init__.py file'
+print(a)
+```
+
+示例
+
+```
+# t 文件夹下的__init__.py
+
+__all__ = ['c7']
+```
+
+```
+# t 文件夹下c7.py
+__all__ = ['a','c']
+a = 2
+b = 3
+c = 4
+```
+
+```
+# t 文件夹下c8.py
+e = 2
+f = 3
+g = 4
+```
+
+```
+# 其他文件夹下 c12.py
+from t import *
+print(c7.a)
+print(c8.e)
+```
+
+
+
+
+
+
+
+
