@@ -11,6 +11,7 @@ tags:
 
 # Python 函数
 
+
 ## 函数的定义与使用
 
 ```
@@ -22,6 +23,18 @@ def user_print(code):
 a = add(1, 2)
 b = user_print('python')
 print(a, b)
+```
+
+阶乘
+
+```
+def fact(n, m = 1):
+    s = 1
+    for i in range(1, n+1):
+        s *= i
+    return s//m
+
+print(fact(4,5))
 ```
 
 
@@ -47,6 +60,7 @@ skill_1_damages, skill_2_damages = damage(3, 6)
 print(skill_1_damages, skill_2_damages)
 print(type(damage(3,6)))
 ```
+
 
 ## 指定返回结果的小数位数
 
@@ -83,7 +97,7 @@ c = add(y = 3, x = 2)
 print(c)
 ```
 
-## 默认参数
+### 默认参数
 
 ```
 def print_student_files(name, gender = '男', age = '12', college = '人民路小学' ):
@@ -97,3 +111,327 @@ print_student_files('叮当', '男', 12)
 print('~~~~~~~~~~~~~~~~~~~~~~~~~~')
 print_student_files('佩琦', '女', age = 12, college = '万达小学')
 ```
+
+### 可变参数传递
+
+```
+def fact(n, *b):
+    s = 1
+    for i in range(1, n+1):
+        s *= i
+    for item in b:
+        s *= item
+
+    return s
+
+print(fact(4,5,2))
+```
+
+## 局部变量和全局变量
+
+```
+n, s = 10, 100
+def fact(n):
+    s = 1
+    for i in range(1, n+1):
+        s *= i
+    return s
+print(fact(n),s)
+```
+```
+n, s = 10, 100
+def fact(n):
+    global s
+    for i in range(1, n+1):
+        s *= i
+    return s
+print(fact(n),s)
+```
+
+基本数据类型，无论是否重名，局部变量和全局变量不同，
+组合数据类型，如局部变量未真实创建，则是全局变量
+
+```
+Is = ['F', 'f']
+def func(a):
+    Is.append(a)
+    return
+func('C')
+print(Is)
+```
+
+```
+Is = ['F', 'f']
+def func(a):
+    Is = []
+    Is.append(a)
+    return
+func('C')
+print(Is)
+```
+
+## lambda
+
+1. 一种紧凑的函数表达形式
+2. 等价于如下表达式
+
+```
+def<函数名>(<参数>):
+	<函数体>
+	return <返回值>
+```
+```
+f = lambda x,y : x + y
+print(f(10, 15))
+```
+```
+f = lambda : "这是lambda函数"
+print(f())
+```
+
+## 递归函数
+
+
+```
+def base(n):
+    if n > 1:
+        s = n * base(n-1)
+    else:
+        s = 1
+    return s
+
+def is_number(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        pass
+ 
+    try:
+        import unicodedata
+        unicodedata.numeric(s)
+        return True
+    except (TypeError, ValueError):
+        pass
+ 
+    return False
+
+
+def main():
+    user_in = input('请输入一个正整数：')
+    
+    if is_number(user_in):
+        user_in = eval(user_in)
+        if user_in >= 0: 
+            print(base(user_in))
+        else:
+            print('输入的数值不能为负数')
+    else:
+        print('输入格式错误，请检查')
+
+main()
+
+```
+
+使用切片进行反转
+```
+user_in = input()
+print(user_in[::-1])
+```
+
+递归实现字符串的反转
+
+```
+def rvs(s):
+    if s == '':
+        return s
+    else:
+        return s[1:] + s[0]
+
+print(rvs(input()))
+```
+
+
+
+## 应用示例
+
+### 七段数码管
+
+```
+import turtle
+
+def drawLine(draw):
+    if draw:
+        turtle.pendown()
+    else:
+        turtle.penup()
+    turtle.fd(40)
+    turtle.right(90)
+
+def drawDigit(digit):
+    drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,6,8] else drawLine(False)
+    turtle.left(90)
+    drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)
+    turtle.left(180)
+    turtle.penup()
+    turtle.fd(20)
+
+def drawDate(date):
+    for i in date:
+        drawDigit(eval(i))
+    return
+
+def main():
+    turtle.setup(800,350,200,200)
+    turtle.penup()
+    turtle.fd(-300)
+    turtle.pensize(5)
+    turtle.pencolor('red')
+    drawDate('20180709')
+    turtle.hideturtle()
+    turtle.done()
+
+main()
+```
+
+### 七段数码管的高级版本
+
+```
+import turtle, time
+
+def drawGap():
+    turtle.penup()
+    turtle.fd(5)
+
+
+def drawLine(draw):
+    drawGap()
+    if draw:
+        turtle.pendown()
+    else:
+        turtle.penup()
+    turtle.fd(40)
+    drawGap()
+    turtle.right(90)
+
+def drawDigit(digit):
+    drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,6,8] else drawLine(False)
+    turtle.left(90)
+    drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)
+    turtle.left(180)
+    turtle.penup()
+    turtle.fd(20)
+
+def drawDate(date):
+    turtle.pencolor('red')
+    for i in date:
+        if i == '-':
+            turtle.write('年', font=('Arial',18,"normal"))
+            turtle.pencolor('green')
+            turtle.fd(40)
+        elif i == '=':
+            turtle.write('月', font=('Arial',18,"normal"))
+            turtle.pencolor('blue')
+            turtle.fd(40)
+        elif i == '+':
+            turtle.write('日', font=('Arial',18,"normal"))
+        else:   
+            drawDigit(eval(i))
+
+def main():
+    turtle.setup(800,350,200,200)
+    turtle.penup()
+    turtle.fd(-300)
+    turtle.pensize(5)
+    drawDate(time.strftime('%Y-%m=%d+',time.gmtime()))
+    turtle.hideturtle()
+    turtle.done()
+
+main()
+```
+
+### 汉诺塔
+
+```
+count = 0
+def hanoi(n, src, dst, mid):
+    global count
+    if n == 1:
+        print('{}:{}->{}'.format(n, src, dst))
+        count = count + 1
+    else:
+        hanoi(n-1, src, mid, dst)
+        print('{}:{}->{}'.format(n, src, dst))
+        count = count + 1
+        hanoi(n-1, mid, dst, src)
+user_in = eval(input())
+hanoi(user_in, 'A', 'C', 'B')
+print(count)
+```
+
+### 科赫雪花
+
+```
+import turtle
+user_in = eval(input('请输入阶数'))
+def koch(size, n):
+    if n == 0:
+        turtle.fd(size)
+    else:
+        for angle in [0, 60, -120, 60]:
+            turtle.left(angle)
+            koch(size/3, n-1)
+
+def main():
+    turtle.setup(800, 400)
+    turtle.penup()
+    turtle.goto(-300, -50)
+    turtle.pendown()
+    turtle.pensize(2)
+    koch(600,user_in)
+    turtle.hideturtle()
+
+main()
+```
+
+### 雪花效果
+
+```
+import turtle
+def koch(size, n):
+    if n == 0:
+        turtle.fd(size)
+    else:
+        for angle in [0, 60, -120, 60]:
+            turtle.left(angle)
+            koch(size/3, n-1)
+
+def main():
+    turtle.setup(600,600)
+    turtle.penup()
+    turtle.goto(-200, 100)
+    turtle.pendown()
+    turtle.pensize(2)
+    level = 3
+    koch(400,level)
+    turtle.right(120)
+    koch(400,level)
+    turtle.right(120)
+    koch(400,level)
+    turtle.hideturtle()
+
+main()
+```
+
+
+

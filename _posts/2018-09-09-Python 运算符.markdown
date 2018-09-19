@@ -14,17 +14,28 @@ tags:
 
 ## 算术运算符
 
-###余数
+### 余数
 
 ```
 5%2
 ``` 
 
-###乘方
+### 乘方
 
 ```
 2**5
 ```
+
+### 算术运算的函数
+
+1. abs(x) 绝对值
+2. divmod(x,y) 同时输出商和余数
+3. pow(x,y,z)  幂余，pow(3,4,10)
+4. round(x,d) 保留小数位
+5. max(x1, x2, x3) 返回最大值
+6. min(x1, x2, x3) 返回最小值
+
+
 
 ## 关系运算符
 
@@ -166,4 +177,48 @@ if account == user_account and password == user_password:
 	print('success')
 else:
 	print('fail')
+```
+
+### 天天向上的例子
+
+#### 工作日的力量
+
+```
+dayup = 1.0
+dayfactor = 0.01
+for i in range(365):
+    if i % 7 in [6, 0]:
+        dayup = dayup * (1 - dayfactor)
+    else:
+        dayup = dayup * (1 + dayfactor)
+print("工作日的力量: {:.2f}".format(dayup))
+```
+
+#### 努力和堕落的对比
+
+```
+dayfactor = 0.005
+dayup = pow(1 + dayfactor, 365)
+daydown = pow(1 - dayfactor, 365)
+print("向上:{:.2f}, 向下:{:.2f}".format(dayup,daydown))
+```
+
+#### 通过循环找到努力系数
+```
+import time
+def dayUp(df):
+    dayup = 1
+    for i in range(365):
+        if i % 7 in [6,0]:
+            dayup = dayup*(1-0.01)
+        else:
+            dayup = dayup*(1+df)
+    return dayup
+dayfactor = 0.01
+start = time.perf_counter()
+while dayUp(dayfactor) < 37.78:
+    dayfactor = dayfactor + 0.001
+print('工作日的努力参数是：{:.3f}'.format(dayfactor))
+dur = time.perf_counter()-start
+print('本次计算用时：{:.3f}'.format(dur))
 ```

@@ -35,5 +35,7 @@ tags:
 2. Process
 3. Output
 
+## Unicode 编码
 
-
+1. 每个编码对应一个字符
+2. 从0到0x10FFFF 

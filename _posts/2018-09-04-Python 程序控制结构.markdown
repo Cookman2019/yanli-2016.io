@@ -1,0 +1,202 @@
+---
+layout:     post
+title:      "Python 程序控制结构"
+subtitle:   ""
+date:       2018-09-04
+author:     "YanSir Park"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - Python
+---
+
+
+# Python 程序控制结构
+
+## 空语句
+
+```
+if True
+	pass
+```
+
+## 分支结构
+
+### 单分支
+
+```
+guess = eval(input('请输入1-100的数字'))
+if guess == 99:
+    print('恭喜，猜对了')
+```
+
+### 二分支
+
+```
+guess = eval(input('请输入1-100的数字'))
+if guess == 99:
+    print('恭喜，猜对了')
+else:
+    print('猜错了')
+```
+
+
+### 多分支
+
+```
+score = eval(input('请输入学生成绩'))
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "E"
+print("输入成绩属于级别{}".format(grade))
+```
+
+### 条件判断
+
+6种操作符:<,>,<=,>=,==,!=
+三个保留字: 
+1. x and y
+2. x or y
+3. not x
+
+条件判断及组合
+
+```
+guess = eval(input('请输入学生成绩'))
+if guess > 99 or guess < 99:
+    print('猜错了')
+else:
+    print('猜对了')
+```
+
+### 异常处理
+
+```
+try:
+    num = eval(input('请输入一个整数：'))
+    print(num**2)
+except NameError:
+    print('输入的不为整数')
+```
+
+```
+try:
+    num = eval(input('请输入一个整数：'))
+    print(num**2)
+except:
+    print('输入的不为整数')
+```
+
+
+## 循环结构
+
+### 遍历循环
+
+#### for 循环
+
+```
+a = [['apple','pear','orange','grape'],(1,2,3)]
+for x in a:
+    for y in x:
+        print(y,end='|')
+```
+
+#### for_range 连用
+
+```
+for x in range(0, 10, 2):
+    print(x, end=' | ')
+```
+
+```
+for x in range(10, 0,-2):
+    print(x, end=' | ')
+```
+
+#### for...else 
+
+```
+a = [['apple','pear','orange','grape'],(1,2,3)]
+for x in a:
+    for y in x:
+        print(y)
+else:
+    print('fruit is gone')
+```
+
+### 无限循环
+
+```
+a = 5
+while a>0:
+    a = a - 1
+    print(a)
+```
+
+### 两个保留关键字
+
+
+
+#### break
+
+跳出并结束当前循环，执行循环后的语句
+
+```
+a = [['apple','pear','orange','grape'],(1,2,3)]
+for x in a:
+    for y in x:
+        if y == 2:
+            break
+        print(y)
+else:
+    print('fruit is gone')
+```
+
+```
+a = [['apple','pear','orange','grape'],(1,2,3)]
+for x in a:
+    for y in x:
+        if y == 'orange':
+            break
+        print(y)
+else:
+    print('fruit is gone')
+```
+
+#### continue
+
+结束当次循环，继续执行后续的次数循环
+
+```
+a = [['apple','pear','orange','grape'],(1,2,3)]
+for x in a:
+    for y in x:
+        if y == 2:
+            continue
+        print(y)
+else:
+    print('fruit is gone')
+```
+
+## 应用示例
+
+### 长度单位的转换
+
+```
+User_temp = input()
+if User_temp[-2:] in ['in']:
+    Transfer = eval(User_temp[0:-2]) / 39.37
+    print(str(format(Transfer, '0.3f')) + 'm')
+elif User_temp[-1] in ['m']:
+    Transfer = eval(User_temp[0:-1]) * 39.37
+    print(str(format(Transfer, '0.3f')) + 'in')
+else:
+    print("输入的数据有误")
+```
+

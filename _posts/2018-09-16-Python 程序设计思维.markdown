@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Python 程序设计
+title:      "Python 程序设计思维
 subtitle:   
 date:       2018-08-19
 author:     "YanSir Park"
@@ -9,7 +9,7 @@ tags:
     - Python
 ---
 
-# Python 程序设计示例
+# Python 程序设计思维
 
 ## 程序设计思维
 
