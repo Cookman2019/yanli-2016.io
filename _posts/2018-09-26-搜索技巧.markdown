@@ -1,0 +1,232 @@
+---
+layout:     post
+title:      "搜索技巧"
+subtitle:   ""
+date:       2018-09-25
+author:     "YanSir Park"
+header-img: "img/post-bg-js-version.jpg"
+tags:
+    - 搜索
+    - 信息搜集
+---
+
+# 搜索的技巧
+
+## 常用搜索命令
+
+### 口语化搜索转化为关键词搜索
+
+示例：
+
+```
+口语化搜索: “怎么把我iphone手机上的照片传到电脑上” 
+
+关键词搜索:  “iphone照片 传到电脑”
+```
+
+### 限定文件类型
+
+```
+关键词 空格 filetype:文件格式
+```
+
+
+示例：
+
+```
+2018考研英语真题 filetype:pdf
+
+项目管理 filetype:ppt
+```
+
+### 特定时间内的关键词信息
+
+```
+“关键词 空格 20xx..20xx”
+```
+
+示例：
+
+```
+电商 2008..2018
+
+知识付费 2015..2018
+```
+
+### 不包含某关键词
+
+```
+“关键词 空格－关键词”
+```
+
+示例：
+
+```
+”注册会计师考试 －推广 －推广链接”，用于减少广告的干扰
+```
+
+
+
+### 将关键词限定在标题中
+
+```
+“关键词 空格 intitle:需要限定的关键词” 
+```
+
+
+示例：
+
+```
+刘亦菲 intitle:迪奥 
+```
+
+### 搜索示例
+
+在纽约时报上搜索写于2010-2017年，关于大学成绩的的文章，但又不想搜到 SAT 的文章
+
+```
+site:nytimes: ~collage "test scores" -SATs 2010..2017
+```
+
+搜索关于 Learning design 标题中有STEM 的 pdf 格式的论文
+
+```
+filetype: pdf "learning design" intitle:STEM
+```
+
+房贷政策的官方信息
+
+```
+深圳 房贷政策 inurl: gov
+```
+
+### 解决问题的思路
+
+1. STAR 模型：情境(situation)、任务(task)、行动(action)、结果(result)
+2. GROW 模型：了解目标（Goal）、理清现实（Reality）、方案选择（Option）、确认行动（Will）
+3. PDCA：Plan, Do, Check, Action
+4. 6W2H 模型
+5. 空－雨－伞模型
+
+## 常用网址
+
+### 资源搜索
+
+1. [虫部落快搜](http://search.chongbuluo.com)
+2. [即搜] (https://deepso.io) 
+3. [搜盘盘](https://www.sopanpan.com/userlist/)
+4. [猎手导航](http://www.cocmon.com/)
+5. [V盘搜](http://www.vpansou.com/)
+
+
+### 搜索引擎
+
+1. [搜狗微信](http://weixin.sogou.com)
+2. [知乎搜狗](http://zhihu.sogou.com)
+
+### 学术资料
+
+1. [Glgoo学术搜索](https://xueshu.glgoo.net)
+2. [谷歌学术](https://scholar.google.com.hk/?hl=zh-CN)
+3. [Coursera](www.coursera.org) 
+4. [Edx](www.edx.org)
+5. [维基百科](www.wikipedia.org)
+6. [TED演讲](www.ted.com) 
+7. [各领域大牛及其工作社交网络查询](www.aminer.cn) 
+
+### 医疗
+
+1. 世界卫生组织药物指南
+2. 世卫组织基本药物标准清单
+3. [医学导航网](http://www.meddir.cn/)
+
+### 健康饮食
+
+[健康饮食餐盘](https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/translations/chinese_simplified/)
+
+### 美食
+
+1. yummly 食谱搜索引擎
+2. 食上app
+
+### 购物
+
+1. [万维家电网](http://www.ea3w.com/) 
+2. [优惠券库](http://www.quanmama.com)
+3. [商品全网比价](http://home.manmanbuy.com/bijia.aspx) 
+4. [商品历史价格查询](http://tool.manmanbuy.com/HistoryLowest.aspx)
+
+
+### 聚合类网站
+
+1. [万能查询](http://iumr.gq/) 
+2. [便民查询](https://www.51240.com/)核实身份证信息
+
+### 办公
+
+1. [PPT资源库](http://office.mmais.com.cn/Template/Home.shtml)
+2. OfficePLUS
+3. [Pexels 静态图片](https://www.pexels.com/)
+4. [Giphy Gif 动图](https://giphy.com/search/talk)
+5. [比格PPT模版](http://www.tretars.com/)
+
+### 个人提升
+
+1. [读书世界](http://www.readbooks.cc/)
+2. [大家论坛_考证](http://club.topsage.com/)
+
+
+### 人脉
+[人脉邮箱地址查询](https://hunter.io)
+
+
+### 宏观信息查询
+
+1. [国务院发展研究中心信息网](http://www.drcnet.com.cn/www/integrated/)
+2. [IBM 官网](https://www.ibm.com/cn-zh/) 行业信息
+3. [中国经济信息网](http://www.cei.gov.cn/) 市场容量 销量等数据
+4. [国家统计局](http://www.stats.gov.cn/) 最主要的数据
+
+### 趋势查询
+1. [微指数](http://data.weibo.com/index)
+2. 微信指数
+3. [大数据资源库_重要](http://hao.199it.com)
+
+
+### 查找代码
+
+1. [Codefordge](http://www.codeforge.cn/)
+2. Github
+3. 源码搜索
+4. 开源中国
+
+### 商务出差
+
+1. 航班准点查询
+2. 飞常准
+3. flightradar 24 国际航班 
+ 
+### 商业安全
+ 
+ 1. 天眼查
+ 2. 企查查
+ 3. 中国执行信息公开网
+ 4. 中国庭审公开网
+ 
+### 行业标准查询
+ 
+[工标网](http://www.csres.com/) 
+
+
+
+### 企业理财类
+
+1. 中国理财网 查询理财产品
+2. 中国保险监督管理委员会 保险业查询
+3. 中国信托业协会 信托查询
+4. 中国证监会 首次公开发行股票信息披露
+5. 国家企业信用信息公示系统 
+6. 中国商标网 商标查询和注册商标
+7. maigoo 产品查询神器
+
+
